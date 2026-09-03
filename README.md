@@ -1,4 +1,5 @@
 # Desciframiento Procedural del Manuscrito Voynich: Tradición Espagírica Andalusí
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.222671.svg)](https://doi.org/10.5281/zenodo.222671)
 
 Repositorio de reproducibilidad científica y datos computacionales que documentan la naturaleza del Manuscrito Voynich (Beinecke MS 408) como un manual técnico de laboratorio y botica.
 
