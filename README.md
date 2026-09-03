@@ -10,11 +10,19 @@ Repositorio de reproducibilidad científica y datos computacionales que document
 * **Prueba ciega de albarelos (f88r–f89r):** 100% de correlación nominal con la raíz de contención `-ol-`.
 
 ### Estructura de Archivos del Repositorio
-* **preprint_voynich_andalusi.pdf**: Preprint formal de alta densidad en formato IMRyD listo para revisión por pares.
-* **farmacopea_completa_voynich.csv**: Base de datos estructurada con las 20 recetas farmacéuticas decodificadas por componentes.
-* **traduccion_tecnica_f86v6.txt**: Protocolo de destilación continua del folio de las Nueve Rosetas (líneas 1 a 20).
-* **expediente_certificacion_voynich.txt**: Ficha técnica codicológica y correlación de métricas de taller.
-* **bundle_voynich_andalusi.zip**: Paquete integral de reproducibilidad con sumas de verificación SHA-256.
+* **`preprint_voynich_andalusi.pdf`**: Preprint formal de alta densidad en formato IMRyD listo para revisión por pares.
+* **`voynich_andalusi_pipeline.py`**: Pipeline reproducible en Python para el procesamiento léxico, metrológico y matricial.
+* **`farmacopea_completa_voynich.csv`**: Base de datos estructurada con las 20 recetas farmacéuticas decodificadas por componentes.
+* **`traduccion_tecnica_f86v6.txt`**: Protocolo de destilación continua del folio de las Nueve Rosetas (líneas 1 a 20).
+* **`expediente_certificacion_voynich.txt`**: Ficha técnica codicológica y correlación de métricas de taller.
+* **`bundle_voynich_andalusi.zip`**: Paquete integral de reproducibilidad con sumas de verificación SHA-256.
+* **`requirements.txt`**: Dependencias y librerías necesarias para ejecutar el pipeline.
 
-### Circuito Operacional Demostrado
-`[f71v: Zodiaco]` -> `[f1r/f17r: Herbario]` -> `[f86v: Destilación Rosetas]` -> `[f78r/f79r: Balneoterapia]` -> `[f89r: Farmacia/Albarelos]`
+### Instrucciones de Reproducibilidad
+
+Para auditar y ejecutar el pipeline localmente:
+
+1. Clonar el repositorio:
+```bash
+git clone [https://github.com/Montiel06/REPOSITORIO-DE-REPRODUCIBILIDAD-DESCIFRAMIENTO-PROCEDURAL-DEL-MANUSCRITO-VOYNICH.git](https://github.com/Montiel06/REPOSITORIO-DE-REPRODUCIBILIDAD-DESCIFRAMIENTO-PROCEDURAL-DEL-MANUSCRITO-VOYNICH.git)
+cd REPOSITORIO-DE-REPRODUCIBILIDAD-DESCIFRAMIENTO-PROCEDURAL-DEL-MANUSCRITO-VOYNICH
