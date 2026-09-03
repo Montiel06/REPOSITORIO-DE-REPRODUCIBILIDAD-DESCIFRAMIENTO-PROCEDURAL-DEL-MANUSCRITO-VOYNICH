@@ -26,3 +26,18 @@ Para auditar y ejecutar el pipeline localmente:
 ```bash
 git clone [https://github.com/Montiel06/REPOSITORIO-DE-REPRODUCIBILIDAD-DESCIFRAMIENTO-PROCEDURAL-DEL-MANUSCRITO-VOYNICH.git](https://github.com/Montiel06/REPOSITORIO-DE-REPRODUCIBILIDAD-DESCIFRAMIENTO-PROCEDURAL-DEL-MANUSCRITO-VOYNICH.git)
 cd REPOSITORIO-DE-REPRODUCIBILIDAD-DESCIFRAMIENTO-PROCEDURAL-DEL-MANUSCRITO-VOYNICH
+Instalar dependencias:
+
+Bash
+
+pip install -r requirements.txt
+
+    Ejecutar el pipeline de análisis:
+
+Bash
+
+python voynich_andalusi_pipeline.py
+
+Circuito Operacional Demostrado
+
+[f71v: Zodiaco] -> [f1r/f17r: Herbario] -> [f86v: Destilación Rosetas] -> [f78r/f79r: Balneoterapia] -> [f89r: Farmacia/Albarelos]
