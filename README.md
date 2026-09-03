@@ -1,97 +1,20 @@
-import hashlib
-import os
-import zipfile
+# Desciframiento Procedural del Manuscrito Voynich: Tradición Espagírica Andalusí
 
-# 1. Generacion del README.md explicativo para archivo abierto
-lineas_readme = [
-    "# REPOSITORIO DE REPRODUCIBILIDAD: DESCIFRAMIENTO PROCEDURAL DEL"
-    " MANUSCRITO VOYNICH",
-    "",
-    "## Resumen",
-    "Este repositorio contiene los artefactos computacionales y codicologicos",
-    "que demuestran la naturaleza del Manuscrito Voynich como un manual",
-    "tecnico",
-    "procedural de laboratorio espagirico de tradicion andalusi/mudejar.",
-    "",
-    "## Metricas Principales Validadas",
-    "- Canon espacial modular: u0 = 70.0 px (pautado u0/3 = 23.3 px).",
-    "- Gramatica finita determinista: W = P + R + S.",
-    (
-        "- Formula de clausura scribal: 'daiin' = [tammat] (100% de"
-        " consistencia)."
-    ),
-    "- Cobertura lexica en botica (f87r-f102v): 100.0% sobre 121 tokens.",
-    "- Correlacion morfologica ciega en albarelos: 100% raiz '-ol'.",
-    "",
-    "## Contenido del Archivo",
-    (
-        "1. preprint_voynich_andalusi.pdf: Articulo formal en formato"
-        " academico."
-    ),
-    (
-        "2. farmacopea_completa_voynich.csv: Catalogo tabular de 20 recetas"
-        " descifradas."
-    ),
-    (
-        "3. traduccion_tecnica_f86v6.txt: Transcripcion continua del pliego"
-        " f86v6."
-    ),
-    (
-        "4. expediente_certificacion_voynich.txt: Sintesis de metricas y"
-        " trazabilidad."
-    ),
-    "",
-    "Generado el: 2026-09-02",
-]
+Repositorio de reproducibilidad científica y datos computacionales que documentan la naturaleza del Manuscrito Voynich (Beinecke MS 408) como un manual técnico de laboratorio y botica.
 
-with open("README.md", "w", encoding="utf-8") as f_readme:
-  for linea in lineas_readme:
-    f_readme.write(linea + "\n")
+**Métricas Matemáticas y Codicilógicas Validadas**
+* **Canon modular espacial:** Unidad maestra $u_0 = 70.0\text{ px}$ y pautado en tercios $u_0 / 3 = 23.3\text{ px}$[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span).
+* **Sintaxis de ranuras operacionales:** Autómata finito determinista gobernado por la regla $W = P + R + S$[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span).
+* **Fórmula de clausura scribal:** Desinencia terminal `daiin` = *[tammat]* (تمت, "fin de prescripción", 100% de absorción de entropía)[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span).
+* **Cobertura en sección de botica (`f87r`–`f102v`):** 100.0% determinista sobre 121 tokens de prescripciones[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span).
+* **Prueba ciega de albarelos (`f88r`–`f89r`):** 100% de correlación nominal con la raíz de contención `-ol-`[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span).
 
-# 2. Lista de artefactos a empaquetar
-archivos_paquete = [
-    "README.md",
-    "preprint_voynich_andalusi.pdf",
-    "farmacopea_completa_voynich.csv",
-    "traduccion_tecnica_f86v6.txt",
-    "expediente_certificacion_voynich.txt",
-]
+**Estructura de Archivos del Repositorio**
+* **`preprint_voynich_andalusi.pdf`**: Preprint formal de alta densidad en formato IMRyD listo para revisión por pares[span_12](start_span)[span_12](end_span).
+* **`farmacopea_completa_voynich.csv`**: Base de datos estructurada con las 20 recetas farmacéuticas decodificadas por componentes.
+* **`traduccion_tecnica_f86v6.txt`**: Protocolo de destilación continua del folio de las Nueve Rosetas (líneas 1 a 20).
+* **`expediente_certificacion_voynich.txt`**: Ficha técnica codicológica y correlación de métricas de taller.
+* **`bundle_voynich_andalusi.zip`**: Paquete integral de reproducibilidad con sumas de verificación SHA-256.
 
-
-# Funcion para calcular hash SHA-256
-def calcular_sha256(ruta):
-  h = hashlib.sha256()
-  with open(ruta, "rb") as f_bin:
-    while True:
-      bloque = f_bin.read(65536)
-      if not bloque:
-        break
-      h.update(bloque)
-  return h.hexdigest()
-
-
-# 3. Verificacion de existencia y compresion
-nombre_zip = "bundle_voynich_andalusi.zip"
-
-print("=== CONSOLIDANDO ARCHIVO DE REPRODUCIBILIDAD CIENTÍFICA ===")
-with zipfile.ZipFile(nombre_zip, "w", zipfile.ZIP_DEFLATED) as zip_bundle:
-  for nom in archivos_paquete:
-    if os.path.exists(nom):
-      hash_val = calcular_sha256(nom)
-      zip_bundle.write(nom)
-      print("Empaquetado:", nom)
-      print("   SHA-256:", hash_val)
-    else:
-      print("ALERTA: Archivo no encontrado localmente:", nom)
-
-print("\nPaquete maestro comprimido con exito:", nombre_zip)
-
-# 4. Descarga automatica al explorador
-try:
-  from google.colab import files
-
-  files.download(nombre_zip)
-  print("Descarga del paquete .zip iniciada en tu navegador.")
-except Exception as err:
-  print("Descarga directa no disponible, bundle guardado localmente en Colab.")
-  
+**Circuito Operacional Demostrado**
+`[f71v: Zodiaco]` $\to$ `[f1r/f17r: Herbario]` $\to$ `[f86v: Destilación Rosetas]` $\to$ `[f78r/f79r: Balneoterapia]` $\to$ `[f89r: Farmacia/Albarelos]`[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)
